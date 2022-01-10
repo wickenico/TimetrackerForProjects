@@ -1,0 +1,69 @@
+@page
+@model TimetrackerForProjects.Pages.Records.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Record</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Record.ProjectNumber" class="control-label"></label>
+                <input asp-for="Record.ProjectNumber" class="form-control" />
+                <span asp-validation-for="Record.ProjectNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Record.Project" class="control-label"></label>
+                <input asp-for="Record.Project" class="form-control" />
+                <span asp-validation-for="Record.Project" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Record.Customer" class="control-label"></label>
+                <input asp-for="Record.Customer" class="form-control" />
+                <span asp-validation-for="Record.Customer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Record.Name" class="control-label"></label>
+                <input asp-for="Record.Name" class="form-control" />
+                <span asp-validation-for="Record.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Record.Surname" class="control-label"></label>
+                <input asp-for="Record.Surname" class="form-control" />
+                <span asp-validation-for="Record.Surname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Record.CurrentDate" class="control-label"></label>
+                <input asp-for="Record.CurrentDate" class="form-control" />
+                <span asp-validation-for="Record.CurrentDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Record.StartTime" class="control-label"></label>
+                <input asp-for="Record.StartTime" class="form-control" />
+                <span asp-validation-for="Record.StartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Record.EndTime" class="control-label"></label>
+                <input asp-for="Record.EndTime" class="form-control" />
+                <span asp-validation-for="Record.EndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
