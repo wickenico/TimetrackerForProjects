@@ -6,47 +6,44 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+
+    <h4 id="date"></h4>
+    <h4 id="currentTime"></h4>
+
     @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
 </div>
 
-<div class="row">
-    <div class="col-sm-6">
-        <div class="card border-dark text-white bg-primary mb-3">
-            <div class="card-body">
-                <h5 class="card-title">Records Overview</h5>
-                <p class="card-text">Create, Edit, View and Delete Records.</p>
-                <a asp-page="Records/Index" class="btn btn-dark">Records</a>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-sm-auto align-self-center">
+            <div class="card border-primary" style="width: 18rem;">
+                <img class="card-img-top" src="img/zeiterfassung.jpg" alt="Card image cap" />
+                <div class="card-body">
+                    <h5 class="card-title">Records</h5>
+                    <p class="card-text">Create, Edit, View and Delete Records.</p>
+                    <a asp-page="Records/Index" class="btn btn-primary">Go to Records</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-auto align-self-center">
+            <div class="card border-primary" style="width: 18rem;">
+                <img class="card-img-top" src="img/computer.jpg" alt="Card image cap" />
+                <div class="card-body">
+                    <h5 class="card-title">Homepage</h5>
+                    <p class="card-text">Directly naviagte to your Homepage.</p>
+                    <a href="https://google.de" target="_blank" class="btn btn-primary">Go to Homepage</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-auto align-self-center">
+            <div class="card border-primary" style="width: 18rem;">
+                <img class="card-img-top" src="img/coding.jpg" alt="Card image cap" />
+                <div class="card-body">
+                    <h5 class="card-title">Changelog</h5>
+                    <p class="card-text">View history of all changes for Timetracker.</p>
+                    <a asp-page="Changelog" class="btn btn-primary">Go to Changelog</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-6">
-        <div class="card border-dark shadow-lg text-white bg-secondary mb-3">
-            <div class="card-body">
-                <h5 class="card-title">Homepage</h5>
-                <p class="card-text">Directly go to your Homepage</p>
-                <a href="#" class="btn btn-dark">Homepage</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-sm-6">
-        <div class="card border-dark shadow-lg text-white bg-info mb-3">
-            <div class="card-body">
-                <h5 class="card-title">Changelog</h5>
-                <p class="card-text">View all changes for Timetracker.</p>
-                <a asp-page="/Changelog" class="btn btn-dark">Changelog</a>
-            </div>
-        </div>
-    </div>
-    @*<div class="col-sm-6">
-        <div class="card border-dark shadow-lg text-white bg-secondary mb-3">
-            <div class="card-body">
-                <h5 class="card-title">Homepage</h5>
-                <p class="card-text">Directly go to your Homepage</p>
-                <a href="#" class="btn btn-dark">Homepage</a>
-            </div>
-        </div>
-    </div>*@
 </div>

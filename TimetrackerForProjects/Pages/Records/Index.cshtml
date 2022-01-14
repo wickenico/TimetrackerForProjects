@@ -2,13 +2,13 @@
 @model TimetrackerForProjects.Pages.Records.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Recors Overview";
 }
 
 <h1>Index</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create" class="btn btn-primary" role="button">Create New</a>
 </p>
 <form>
     <p>
@@ -16,7 +16,7 @@
             <option value="">All</option>
         </select>
         Title: <input type="text" asp-for="SearchString" />
-        <input type="submit" value="Filter" />
+        <input class="btn btn-primary" type="submit" value="Filter">
     </p>
 </form>
 <table class="table">
