@@ -41,4 +41,9 @@
     </None>
     <None Include="wwwroot\Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="RazorPagesMovieContext-a45af870-969e-4ffd-8e3f-028b65b26caa.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

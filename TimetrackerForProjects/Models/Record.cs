@@ -27,6 +27,7 @@ namespace TimeRecForProjects.Models
         [Required]
         [Display(Name = "Date")]
         [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd.MM.yyyy}")]
         public DateTime CurrentDate { get; set; }
 
         [Required]

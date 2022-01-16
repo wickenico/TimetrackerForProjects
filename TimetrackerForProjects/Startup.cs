@@ -27,8 +27,11 @@ namespace TimetrackerForProjects
         {
             services.AddRazorPages();
 
-            services.AddDbContext<RazorPagesMovieContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("RazorPagesMovieContext")));
+            services.AddDbContext<RazorPagesMovieContext>(x => x.UseSqlite("Data Source=RazorPagesMovieContext-a45af870-969e-4ffd-8e3f-028b65b26caa.db"));
+
+            //services.AddDbContext<RazorPagesMovieContext>(options =>
+            //        options.UseSqlite(Configuration.GetConnectionString("RazorPagesMovieContext")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,7 +43,8 @@ namespace TimetrackerForProjects
             }
             else
             {
-                app.UseExceptionHandler("/Error");
+                //app.UseExceptionHandler("/Error");
+                app.UseDeveloperExceptionPage();
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
@@ -56,6 +60,7 @@ namespace TimetrackerForProjects
             {
                 endpoints.MapRazorPages();
             });
+
         }
     }
 }
